@@ -11,12 +11,12 @@ class AlignedDataset(BaseDataset):
         self.root = opt.dataroot    
 
         ### label maps         
-        self.dir_label = os.path.join(opt.dataroot, opt.phase + '_label')              
+        self.dir_label = os.path.join(opt.dataroot, opt.phase, 'day_visible')
         self.label_paths = sorted(make_dataset(self.dir_label))
 
         ### real images
         if opt.isTrain:
-            self.dir_image = os.path.join(opt.dataroot, opt.phase + '_img')  
+            self.dir_image = os.path.join(opt.dataroot, opt.phase, 'day_lwir')
             self.image_paths = sorted(make_dataset(self.dir_image))
 
         ### instance maps

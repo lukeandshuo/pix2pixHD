@@ -49,6 +49,9 @@ def mkdir(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
+def str2bool(v):
+    return v.lower() in ("yes", "true", "t", "1")
+
 ###############################################################################
 # Code from
 # https://github.com/ycszen/pytorch-seg/blob/master/transform.py
